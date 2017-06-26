@@ -45,9 +45,15 @@
          * 现在咱们只需要再添加一个用来渲染页面的view，
          * 和一个调用model增删查改数据，然后调用view渲染页面的controller即可。
          * */
-
-
-        // 测试model
+        var controls = {
+            txtAddSName: "#txtAddSName",
+            txtAddSinger: "#txtAddSinger",
+            btnAdd: "#btnAdd",
+            btnRemove: "#btnRemove",
+            btnFind: "#btnFind",
+            container: ".songslist-main"
+        };
+        new SMControl(controls);
     </script>
 </body>
 
