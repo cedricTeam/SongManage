@@ -1,10 +1,8 @@
 function SMControl(controls) {
     //txtAddSName txtAddSinger btnAdd btnRemove btnFind
-    this.txtAddSName = document.querySelector(controls.txtAddSName);
-    this.txtAddSinger = document.querySelector(controls.txtAddSinger);
-    this.btnAdd = document.querySelector(controls.btnAdd);
-    this.btnRemove = document.querySelector(controls.btnRemove);
-    this.btnFind = document.querySelector(controls.btnFind);
+    for (var key in controls) {
+        this[key] = document.querySelector(controls[key]);
+    }
     this.smModel = new SMModel();
     this.smView = new SMView(document.querySelector(controls.container));
     this.init();
@@ -26,6 +24,11 @@ SMControl.prototype = {
     },
     //页面上的事件触发  增 删 改 查 
     add: function() {
+        if (this.smModel.search(this.txtAddSName.value)) {
+            this.change();
+            this.smView.Html(this.smModel.list);
+            return;
+        }
         var obj = {
             name: this.txtAddSName.value,
             singer: this.txtAddSinger.value
@@ -38,7 +41,7 @@ SMControl.prototype = {
         this.smView.Html(this.smModel.list);
     },
     change: function() {
-
+        this.smModel.change(this.txtAddSName.value, this.txtAddSinger.value);
     },
     find: function() {
         var song = this.smModel.search(this.txtAddSName.value);
