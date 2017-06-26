@@ -1,0 +1,56 @@
+.container {
+            margin: 0 auto;
+            width: 850px;
+            border: 1px solid #dad8d8;
+
+            /*height: 100%;*/
+}
+.songslist-main, .songslist-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.songslist-header {
+    height: 30px;
+    border-bottom: 1px solid #dad8d8;
+    line-height: 30px;
+    background-color: #def;
+}
+
+.songslist-name {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #dad8d8;
+}
+.songslist-singer {
+    position: absolute;
+    left: 40%;
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #dad8d8;
+}
+.songslist-option {
+    position: absolute;
+    left: 90%;
+    width: 10%;
+    height: 100%;
+}
+
+.songslist-main {
+    background-color: #fff;
+    height: 100%;
+}
+.songslist-main .songslist-name{
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+}
+.songslist-main .songslist-singer{
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+}
+.songslist-single {
+    height: 50px;
+}

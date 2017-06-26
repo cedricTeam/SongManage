@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/song.css" />
+    <script src="js/sm_model.js"></script>
+    <script src="js/sm_view.js"></script>
+    <script src="js/sm_control.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="songslist-op">
+            <label for="txtAddSName">歌曲名:</label><input type="text" id="txtAddSName" />
+            <label for="txtAddSinger">歌手:</label><input type="text" id="txtAddSinger" />
+            <button id="btnAdd">添加</button>
+            <button id="btnRemove">删除</button>
+            <button id="btnFind">搜索</button>
+        </div>
+
+        <div class="songslist-header">
+            <div class="songslist-name">歌曲名称</div>
+            <div class="songslist-singer">歌手</div>
+            <div class="songslist-option">操作</div>
+        </div>
+        <div class="songslist-main" id="c">
+            <div class="songslist-single">
+                <div class="songslist-name">歌曲名称</div>
+                <div class="songslist-singer">歌手</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /**
+         * mvc是一种开发模式，你可以用面向过程配合它，也可以用面向对象配合它。
+         * 
+         * m: model 数据模型，所有的软件开发里面都少不了数据
+         * v: view 视图，很多软件都会给用户提供一些视图，比如页面
+         * c: controller 控制器，写一些业务逻辑，里面会调度m与v对象来完成最终目标
+         * 
+         * 咱们之前做的歌曲管理对象，就对应这里的model；
+         * 现在咱们只需要再添加一个用来渲染页面的view，
+         * 和一个调用model增删查改数据，然后调用view渲染页面的controller即可。
+         * */
+
+
+        // 测试model
+    </script>
+</body>
+
+</html>
